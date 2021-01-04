@@ -1,5 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import appStyles from '../styles/App.module.css'
+import { BiCaretDown, BiCaretUp, BiTrash, BiPlusCircle } from 'react-icons/bi'
+import { IoMdArrowDropdown, IoMdArrowDropup, IoIosTrash, IoIosAddCircle }  from 'react-icons/io'
 
 export default function Home() {
   return (
@@ -10,55 +13,66 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+        <header className={appStyles.header}>
+          <h1 className={styles.title}><strong>My</strong>Finance</h1>
+          <div className={appStyles.headerBackground}></div>
+        </header>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+        <div className={appStyles.balanceContainer}>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
+          <div className={appStyles.balance}>
+            <p className={appStyles.balanceText}>Saldo</p>
+            <p className={appStyles.balanceValue}>R$ 1700,00</p>  
+          </div>
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <div className={appStyles.incomeExpense}>
+            <div className={appStyles.income}>1700,00<IoMdArrowDropup/></div>
+            <div className={appStyles.expense}>100,00<IoMdArrowDropdown/></div>
+          </div>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
         </div>
+
+        <div className={appStyles.transactions}>
+          <div className={appStyles.tittle}>Transações</div>
+          <div className={appStyles.transaction}>
+            <div>
+              <IoIosTrash className={appStyles.normalIcon}/>
+              <p>Internet</p>
+            </div>
+            <div>
+              <p className={appStyles.expense}>121,00</p>
+              <IoMdArrowDropdown className={appStyles.expense}/>
+            </div>
+          </div>
+          <div className={appStyles.transaction}>
+            <div>
+              <IoIosTrash className={appStyles.normalIcon}/>
+              <p>Internet</p>
+            </div>
+            <div>
+              <p className={appStyles.expense}>121,00</p>
+              <IoMdArrowDropdown className={appStyles.expense}/>
+            </div>
+          </div>
+          <div className={appStyles.transaction}>
+            <div>
+              <IoIosTrash className={appStyles.normalIcon}/>
+              <p>Internet</p>
+            </div>
+            <div>
+              <p className={appStyles.expense}>121,00</p>
+              <IoMdArrowDropdown className={appStyles.expense}/>
+            </div>
+          </div>
+        </div>
+
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+          <div className={appStyles.footerIcon}>
+            <IoIosAddCircle/>
+            Nova transação
+          </div>
       </footer>
     </div>
   )
