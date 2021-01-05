@@ -1,0 +1,153 @@
+:root{
+  --color-primary: #8EE0C8;
+  --text-input-color: #8A8A8A;
+  --label-color: #5E5E5E;
+  --tittle-color: #373737;
+  --subtittle-color: #696969;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: -apple-system, BlinkMacSystemFont, Oxygen, sans-serif;
+  background: #f3f3f3;
+  font-size: 16px;
+}
+
+.container {
+  padding: .8rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+select {
+  border: 1px solid #C8C8C8;
+  margin-bottom: 1rem;
+  color: var(--text-input-color);
+  appearance: none;
+  font-weight: 200;
+}
+
+input,
+select,
+button {
+  border-radius: 15px;
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* input:nth-child(2) {
+  margin-bottom: 1rem;
+} */
+
+select::ms-expand {
+  display: none;
+}
+
+label {
+  display: block;
+  font-size: 14px;
+  margin: 0 0 .5rem 1rem;
+  color: var(--label-color);
+}
+
+header {
+  padding: .2rem 0;
+  margin-bottom: 1rem;
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25%;
+  background: var(--color-primary);
+  display: flex;
+  z-index: 0;
+}
+
+.button {
+  border: none;
+  background: var(--color-primary);
+  font-weight: bold;
+  margin: 2rem 0;
+  border: 1px solid #80cfb8;
+}
+
+.card {
+  padding: 0 1.5rem;
+  border-radius: 15px;
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+}
+
+.shadow {
+  box-shadow: 0px 0px 80px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  border-bottom: 1px solid #DFDFDF;
+  padding: 1.2rem 0;
+}
+
+.card-main {
+  padding: 2rem 0 0 0;
+}
+
+.card-footer {
+  /* padding-bottom: .4rem; */
+}
+
+h1{
+  font-weight: 400;
+  color: var(--tittle-color);
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--subtittle-color);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  background-color: #fff;
+}
+
+.footer-icon p {
+  font-size: 12px;
+  color: var(--text-input-color);
+}
+
+svg {
+  width: 28px;
+  height: 28px;
+  margin: 0 auto;
+  color: var(--color-primary);
+}
