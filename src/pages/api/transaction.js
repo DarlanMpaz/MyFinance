@@ -4,9 +4,9 @@ export default async (req, res) => {
 
   if (req.method === 'POST') {
 
-    const { description, amount, typeOf } = req.body
+    const { description, amount, income } = req.body
 
-    if (!description || !amount || !typeOf) {
+    if (!description || !amount) {
       res.status(400).json({error: 'Missing body parameters'})
       return
     }
@@ -15,7 +15,7 @@ export default async (req, res) => {
     const response = await db.collection('transactions').insertOne({
       description,
       amount,
-      typeOf
+      income
     })
 
     res.status(200).json(response.ops[0])

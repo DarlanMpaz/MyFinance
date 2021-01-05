@@ -2,7 +2,7 @@
   "files.exclude": {
     "package-lock.json": true,
     ".gitignore": true,
-    ".env.local": true,
+    ".env.local": false,
     ".env.example": true,
     "public": true,
     "node_modules": true,
